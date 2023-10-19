@@ -1,5 +1,3 @@
-## MS (Mitra Service)
-
 ### Requirement
 
 - Please install docker 
@@ -21,7 +19,7 @@ After that, if you want to run again container after restart or shutdown docker,
 Please run below command
 - cd container
 - docker-compose build (to build image)
-- docker volume create --name=ms-mysql-data (create volume for database)
-- docker-compose -p ms-container up -d (create container)
-- docker exec -i ms-db sh -c "MYSQL_PWD=root exec mysql -u root" < container/mysql/database.sql (create db)
-- docker exec -ti php-ms make _init
+- docker volume create --name=csv-mysql-data (create volume for database)
+- docker-compose -p csv-container up -d (create container)
+- docker exec -i csv-db sh -c "MYSQL_PWD=root exec mysql -u root" < container/mysql/database.sql (create db)
+- docker exec -ti php-csv make _init
